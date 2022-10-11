@@ -1,0 +1,123 @@
+libtest-distribution-perl (2.00-5) unstable; urgency=medium
+
+  * Team upload.
+  * Drop blank line in debian/watch
+  * Add debian/upstream/metadata
+  * Bump debhelper compatibility level to 9
+  * Mark package as autopkg-testable
+
+ -- Lucas Kanashiro <kanashiro.duarte@gmail.com>  Thu, 24 Dec 2015 09:55:58 -0200
+
+libtest-distribution-perl (2.00-4) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Fix typos in long description in debian/control file.
+    Thanks to Pascal De Vuyst <pascal.devuyst@gmail.com> (Closes: #745310)
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * Declare compliance with Debian Policy 3.9.6.
+  * Add explicit build dependency on libmodule-build-perl.
+  * Update years of packaging copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 06 Jun 2015 18:12:56 +0200
+
+libtest-distribution-perl (2.00-3) unstable; urgency=low
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ gregor herrmann ]
+  * debian/control: Changed: (build-)depend on perl instead of perl-
+    modules.
+  * Remove alternative (build) dependencies that are already satisfied
+    in oldstable.
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Salvatore Bonaccorso ]
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ gregor herrmann ]
+  * Switch to "3.0 (quilt)" source format.
+  * Add patch to fix POD issues in Changes.pod. (Closes: #711262)
+  * Use dh(1) in debian/rules and debhelper compat level 8.
+  * debian/copyright: switch formatting to Copyright-Format 1.0.
+  * Remove unversioned perl from Depends.
+  * Set Standards-Version to 3.9.4 (no further changes).
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 16 Jun 2013 17:57:06 +0200
+
+libtest-distribution-perl (2.00-2) unstable; urgency=low
+
+  [ David Paleino ]
+  * Remove myself from Uploaders.
+  * debian/copyright: using "Copyright" word for Debian packaging
+  * debian/control:
+    - fix dependencies on libmodule-corelist-perl, since it's also 
+      provided by perl-modules
+    - Standards-Version 3.8.0 (no changes needed)
+
+  [ gregor herrmann ]
+  * debian/control:
+    - switch Vcs-Browser field to ViewSVN
+    - add ${misc:Depends} to Depends: field
+    - change my email address
+    - make alternative dependency on perl-modules versioned and
+      add it to libmodule-build-perl too
+  * Set debhelper compatibility level to 7; adapt
+    debian/{control,compat,rules}.
+  * debian/copyright: switch to new format.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 07 Jan 2009 15:53:19 +0100
+
+libtest-distribution-perl (2.00-1) unstable; urgency=low
+
+  The 'ready for perl 5.10' release.
+
+  [ Damyan Ivanov ]
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza).
+
+  [ David Paleino ]
+  * New upstream release
+  * debian/control:
+    - setting Maintainer to Debian Pkg-Perl Team
+    - moving former maintainer to Uploaders
+    - adding myself to Uploaders
+    - adding libpod-coverage-perl to dependencies
+    - moving libpathtools-perl to Build-Depends-Indep
+    - adding version numbers to dependencies
+    - bumping Standards-Version to 3.7.3
+  * debian/watch - now using a dist-based URL (Closes: #450210)
+  * debian/copyright - adding upstream author's e-mail address
+  * debian/rules:
+    - manually removing .packlist and the arch-specific directory
+
+  [ gregor herrmann ]
+  * debian-control: replace libpathtools-perl with libfile-spec-perl (cf.
+    #423738).
+  * Drop cdbs, create debian/rules from scratch (with the friendly help of
+    the dh-make-perl templates).
+  * debian/control: move libmodule-build-perl from Build-Depends-Indep to
+    Build-Depends, as demanded per policy (used in clean target).
+  * Set debhelper compatibility level to 6.
+  * debian/watch: use improved regexp for matching upstream tarballs.
+  * Drop debian/docs, the README is only a text version of the POD.
+  * Add myself to Uploaders
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Mon, 28 Jan 2008 20:26:12 +0100
+
+libtest-distribution-perl (1.26-1) unstable; urgency=low
+
+  * Initial release (Closes: #422457)
+
+ -- Jose Luis Rivas <ghostbar38@gmail.com>  Wed, 25 Apr 2007 10:12:08 -0400
+
